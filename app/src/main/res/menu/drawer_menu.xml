@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="我就看看">
+        <menu>
+            <item
+                android:id="@+id/drawer_gank"
+                android:checkable="true"
+                android:checked="true"
+                android:title="干货"/>
+            <item
+                android:id="@+id/drawer_news"
+                android:checkable="true"
+                android:title="新闻"/>
+            <item
+                android:id="@+id/drawer_joke"
+                android:checkable="true"
+                android:title="笑话"/>
+        </menu>
+    </item>
+</menu>
