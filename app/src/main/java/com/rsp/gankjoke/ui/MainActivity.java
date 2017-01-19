@@ -44,6 +44,7 @@ public class MainActivity extends BaseActivity<MainPresenent> implements MainPre
     private MenuItem lastMenuItem;
     private BaseFragment currentFragment;
     private ImageView drawer_img;
+    public int q;
 
 
     @Override
