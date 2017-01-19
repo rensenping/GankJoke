@@ -45,6 +45,7 @@ public class MainActivity extends BaseActivity<MainPresenent> implements MainPre
     private BaseFragment currentFragment;
     private ImageView drawer_img;
 
+
     @Override
     protected void initEvent() {
         setToolBar(toolBar,"干货");
