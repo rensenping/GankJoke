@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -91,5 +92,23 @@ public class TechDetailsActivity extends BaseControlActivity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        clearWebViewResource();
+    }
+
+    //防止webview内存泄露
+    private void clearWebViewResource() {
+        if (wvTechContent != null) {
+            wvTechContent.removeAllViews();
+            ((ViewGroup) wvTechContent.getParent()).removeView(wvTechContent);
+            wvTechContent.setTag(null);
+            wvTechContent.clearHistory();
+            wvTechContent.destroy();
+            wvTechContent = null;
+        }
     }
 }

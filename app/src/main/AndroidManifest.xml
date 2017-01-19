@@ -23,7 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.gank.activity.TechDetailsActivity"/>
+        <activity android:name=".ui.gank.activity.TechDetailsActivity"
+            />
         <activity android:name=".ui.gank.activity.MeiziBigActiviy"/>
         <activity android:name=".ui.news.activity.NewsDetailsActivity"
             />
